@@ -1,0 +1,1548 @@
+{
+  "easy": [
+    {
+      "q": "What does 'APR' stand for in relation to a mortgage?",
+      "type": "multi",
+      "options": ["Annual Property Review", "Annual Percentage Rate", "Approved Purchase Rider"],
+      "correct": "Annual Percentage Rate",
+      "explanation": "APR represents the annual cost of a loan, including interest and certain fees, expressed as a percentage.",
+      "loanTypeTag": "General",
+      "regulationTag": "TILA",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Is a borrower generally required to receive a Loan Estimate within 3 business days of application?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "TRID rules require lenders to provide a Loan Estimate (LE) within three business days of receiving a loan application.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "TRID",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What is the primary purpose of Private Mortgage Insurance (PMI)?",
+      "type": "multi",
+      "options": ["To protect the borrower from foreclosure if they lose their job", "To protect the lender if the borrower defaults on the loan", "To lower the overall monthly housing interest payment"],
+      "correct": "To protect the lender if the borrower defaults on the loan",
+      "explanation": "PMI protects the lender if the borrower defaults on a conventional loan, typically when the down payment is less than 20%.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "PMI",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Does the Equal Credit Opportunity Act (ECOA) only prohibit discrimination based on race and gender?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "ECOA prohibits credit discrimination on a broader basis, including race, color, religion, national origin, sex, marital status, or age (provided the applicant has the capacity to contract), or because all or part of the applicant’s income derives from any public assistance program.",
+      "loanTypeTag": "General",
+      "regulationTag": "ECOA",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What is a 'fixed-rate' mortgage?",
+      "type": "multi",
+      "options": ["A mortgage where the interest rate adjusts annually based on market conditions", "A mortgage where the interest rate remains the same for the entire loan term", "A special mortgage type available only to first-time home purchasers"],
+      "correct": "A mortgage where the interest rate remains the same for the entire loan term",
+      "explanation": "In a fixed-rate mortgage, the interest rate is set when you take out the loan and will not change over the loan's term.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Is an appraisal primarily an assessment of a property's structural integrity and repair needs?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "While an appraiser notes property condition, an appraisal is primarily an opinion of a property's fair market value. A home inspection focuses more on structural integrity and repair needs.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "Appraisal",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What does 'LTV' stand for in mortgage lending?",
+      "type": "multi",
+      "options": ["Long Term Value", "Loan-to-Value ratio", "Lender Total Validation"],
+      "correct": "Loan-to-Value ratio",
+      "explanation": "LTV compares the amount of the loan to the appraised value or purchase price of the property, whichever is lower.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Must a Closing Disclosure (CD) be provided to the borrower at least 5 business days before closing?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "TRID rules mandate that the Closing Disclosure must be received by the consumer at least three business days before loan consummation, not five.",
+      "loanTypeTag": "General",
+      "regulationTag": "TRID",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Which type of loan is specifically designed for eligible veterans and active-duty military personnel?",
+      "type": "multi",
+      "options": ["FHA Insured Loan", "USDA Rural Loan", "VA Guaranteed Loan"],
+      "correct": "VA Guaranteed Loan",
+      "explanation": "VA loans are a benefit provided by the Department of Veterans Affairs, often requiring no down payment for eligible individuals.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "VA",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Can 'points' only be paid by the seller to lower the interest rate on a mortgage?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "Discount points can be paid by either the borrower or the seller (as a seller concession, where allowed) to reduce the interest rate. One point costs 1% of the mortgage amount.",
+      "loanTypeTag": "General",
+      "regulationTag": "TILA",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What is the common name for the primary mortgage application form, Fannie Mae Form 1003?",
+      "type": "multi",
+      "options": ["Uniform Residential Loan Application (URLA)", "Standardized Borrower Information Form (SBIF)", "General Mortgage Applicant Profile (GMAP)"],
+      "correct": "Uniform Residential Loan Application (URLA)",
+      "explanation": "The Uniform Residential Loan Application (URLA), also known as Fannie Mae Form 1003, is the standard application form used by most mortgage lenders in the United States.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Is 'escrow' an account primarily used by the borrower to save for a down payment?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "While saving for a down payment is crucial, an escrow account in the mortgage context is managed by the lender to pay property taxes and homeowners insurance premiums on behalf of the borrower.",
+      "loanTypeTag": "General",
+      "regulationTag": "RESPA",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What does 'PITI' stand for in a mortgage payment context?",
+      "type": "multi",
+      "options": ["Principal, Interest, Taxes, and Insurance", "Payment, Income, Term, and Investment value", "Property, Investment, Title, and Insurance cost"],
+      "correct": "Principal, Interest, Taxes, and Insurance",
+      "explanation": "PITI represents the four main components of a typical monthly mortgage payment.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Does a good credit score guarantee the lowest possible mortgage interest rate available in the market?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "While a good credit score generally results in a lower mortgage interest rate offer, other factors like market conditions, loan type, LTV, and lender-specific pricing also influence the final rate.",
+      "loanTypeTag": "General",
+      "regulationTag": "Credit",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What is the minimum down payment typically required for an FHA loan for borrowers with a credit score of 580 or higher?",
+      "type": "multi",
+      "options": ["0% of purchase price", "3.5% of purchase price", "10% of purchase price"],
+      "correct": "3.5% of purchase price",
+      "explanation": "FHA loans allow for a down payment as low as 3.5% for borrowers with a credit score of 580 or higher.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "FHALoan",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Is 'title insurance' designed to protect against future property damage, like a fire or storm?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, title insurance protects against losses from undiscovered defects in the property title that occurred *before* the purchase. Homeowners insurance covers future property damage.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What is a 'pre-approval' letter from a mortgage lender?",
+      "type": "multi",
+      "options": ["A legally binding guarantee of loan funding regardless of final conditions", "A conditional commitment to lend a certain amount based on initial review", "The final loan agreement document signed by all parties at closing"],
+      "correct": "A conditional commitment to lend a certain amount based on initial review",
+      "explanation": "A pre-approval indicates that a lender has reviewed your financial information and is likely to approve you for a specific loan amount, subject to certain conditions like an appraisal.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Are property taxes typically paid only once every five years to the local government taxing authority?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "Property taxes are usually assessed annually by local governments and can often be paid in installments (e.g., semi-annually or as part of monthly mortgage payments via escrow), not every five years.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What is the 'debt-to-income' (DTI) ratio primarily used for by mortgage lenders?",
+      "type": "multi",
+      "options": ["To assess the borrower's overall creditworthiness and past payment history", "To determine the specific loan term length, such as 15 or 30 years", "To evaluate a borrower's capacity to manage monthly debt payments"],
+      "correct": "To evaluate a borrower's capacity to manage monthly debt payments",
+      "explanation": "DTI compares a borrower's total monthly debt payments (including the proposed mortgage) to their gross monthly income.",
+      "loanTypeTag": "General",
+      "regulationTag": "ATRQM",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Is it possible to refinance a mortgage to obtain a lower interest rate or change the loan term?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "Refinancing involves replacing an existing mortgage with a new one, often to secure a lower interest rate, change the loan term, or tap into home equity.",
+      "loanTypeTag": "Refinance",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What is 'homeowners insurance' primarily intended to cover for a property owner?",
+      "type": "multi",
+      "options": ["Paying off the mortgage balance in the event of the owner's unexpected death", "Covering physical damage to the property and liability for injuries on site", "Ensuring the property's market value consistently increases over the years"],
+      "correct": "Covering physical damage to the property and liability for injuries on site",
+      "explanation": "Homeowners insurance provides financial protection against disasters, theft, and accidents on the property.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Are USDA loans available for properties located in major metropolitan city centers?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "USDA Rural Development loans are designed to help low- and moderate-income households purchase homes in eligible *rural* areas, not typically major metropolitan city centers.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What does 'amortization' refer to in the context of a mortgage loan repayment schedule?",
+      "type": "multi",
+      "options": ["The process of the outstanding loan balance increasing due to unpaid interest", "The systematic paying off of a loan over time through regular installments", "The initial application fee charged by the lender for processing the loan"],
+      "correct": "The systematic paying off of a loan over time through regular installments",
+      "explanation": "Amortization is the schedule of loan payments, showing how each payment is allocated between principal and interest over the life of the loan.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Is flood insurance typically included as a standard component of a homeowners insurance policy?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "Flood damage is generally not covered by standard homeowners insurance policies; separate flood insurance is required for properties in flood-prone areas.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What is a 'conventional' mortgage loan?",
+      "type": "multi",
+      "options": ["A home loan that is directly insured or guaranteed by the Federal Housing Administration (FHA)", "A mortgage not insured or guaranteed by a federal government agency like FHA, VA, or USDA", "A specialized loan product exclusively available to individuals with very high incomes"],
+      "correct": "A mortgage not insured or guaranteed by a federal government agency like FHA, VA, or USDA",
+      "explanation": "Conventional mortgages are originated and serviced by private lenders and are not directly insured or guaranteed by the federal government, though they may conform to Fannie Mae or Freddie Mac guidelines.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Does a 'jumbo loan' refer to a mortgage amount that is smaller than the conforming loan limits set by FHFA?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, jumbo loans are mortgages that are *larger* than the loan limits established by the Federal Housing Finance Agency (FHFA) for conforming loans.",
+      "loanTypeTag": "Jumbo",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What is the 'origination fee' charged by a mortgage lender primarily for?",
+      "type": "multi",
+      "options": ["Covering the cost of the independent property appraisal report", "Processing a new loan application and underwriting services", "Paying for the title search and associated title insurance policy"],
+      "correct": "Processing a new loan application and underwriting services",
+      "explanation": "The origination fee covers the lender's administrative costs to process the loan, and is typically a percentage of the loan amount.",
+      "loanTypeTag": "General",
+      "regulationTag": "TILA",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Can making additional payments towards the principal balance help a borrower pay off their mortgage faster?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "Making additional payments directly towards the principal balance can reduce the loan term and the total amount of interest paid.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What is a 'short sale' in the context of real estate transactions?",
+      "type": "multi",
+      "options": ["A very quick property sale, usually completed in less than one week, often above market value", "Selling a property for less than the outstanding mortgage balance with the lender's approval", "A temporary sale agreement that lasts for a short, predefined period before becoming permanent"],
+      "correct": "Selling a property for less than the outstanding mortgage balance with the lender's approval",
+      "explanation": "A short sale occurs when the lender agrees to let the borrower sell the property for an amount less than what is owed on the mortgage, usually to avoid foreclosure.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Is a 'lien' a legal right granted to a property owner to use another's land for a specific purpose?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, that describes an easement. A lien is a legal claim or encumbrance against a property for an unpaid debt or obligation, giving a creditor a security interest in the property.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    { "q": "What does 'GFE' stand for in mortgage lending (now largely replaced by the Loan Estimate)?",
+      "type": "multi",
+      "options": ["Guaranteed Funding Estimate", "Good Faith Estimate", "General Fee Expense"],
+      "correct": "Good Faith Estimate",
+      "explanation": "The GFE was a disclosure form previously required under RESPA that estimated settlement service charges.",
+      "loanTypeTag": "General",
+      "regulationTag": "RESPA",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Is 'closing' the very first step in applying for a mortgage loan?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, closing (or settlement) is the final step where loan documents are signed, funds are disbursed, and ownership is transferred.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What is the 'principal' part of a mortgage payment?",
+      "type": "multi",
+      "options": ["The portion that covers property taxes", "The portion that covers homeowners insurance", "The portion that reduces the outstanding loan balance"],
+      "correct": "The portion that reduces the outstanding loan balance",
+      "explanation": "Principal payments directly reduce the amount of money originally borrowed.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Does a borrower need perfect credit to qualify for any type of mortgage?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, while better credit generally leads to better terms, various loan programs (like FHA) exist for borrowers with less-than-perfect credit.",
+      "loanTypeTag": "General",
+      "regulationTag": "Credit",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What is an 'Adjustable-Rate Mortgage' (ARM)?",
+      "type": "multi",
+      "options": ["A loan where the interest rate can change over time", "A loan where the principal balance adjusts based on home value", "A loan that can only be used for adjustable beds"],
+      "correct": "A loan where the interest rate can change over time",
+      "explanation": "ARMs typically have an initial fixed-rate period, after which the rate adjusts periodically based on a market index.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Is a 'home inspection' the same thing as a property appraisal?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, an inspection assesses the property's condition and systems, while an appraisal estimates its market value.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What does 'HOA' stand for in real estate?",
+      "type": "multi",
+      "options": ["Home Office Area", "Homeowners Association", "Housing Occupancy Agreement"],
+      "correct": "Homeowners Association",
+      "explanation": "An HOA governs a community or condominium, setting rules and collecting fees for maintenance.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Is the 'HUD-1 Settlement Statement' still the primary closing form used for most mortgages today?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, for most mortgages initiated after October 2015, the HUD-1 was replaced by the Closing Disclosure (CD) under TRID rules.",
+      "loanTypeTag": "General",
+      "regulationTag": "TRID",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Which government agency backs VA loans?",
+      "type": "multi",
+      "options": ["Department of Housing and Urban Development (HUD)", "Department of Agriculture (USDA)", "Department of Veterans Affairs (VA)"],
+      "correct": "Department of Veterans Affairs (VA)",
+      "explanation": "The VA guarantees a portion of the loan, enabling lenders to offer favorable terms to eligible veterans.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "VA",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Can paying 'discount points' potentially lower your monthly mortgage payment?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "Yes, paying points upfront typically lowers the interest rate, which in turn reduces the monthly principal and interest payment.",
+      "loanTypeTag": "General",
+      "regulationTag": "TILA",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What is the primary function of the 'Fannie Mae' corporation?",
+      "type": "multi",
+      "options": ["To directly lend money to homebuyers", "To insure homeowners against property damage", "To buy mortgages from lenders to provide market liquidity"],
+      "correct": "To buy mortgages from lenders to provide market liquidity",
+      "explanation": "Fannie Mae (and Freddie Mac) are government-sponsored enterprises that operate in the secondary mortgage market.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Does RESPA primarily regulate interest rates charged by lenders?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, RESPA (Real Estate Settlement Procedures Act) focuses on disclosures of settlement costs and eliminating kickbacks, not regulating interest rates (which falls more under TILA).",
+      "loanTypeTag": "General",
+      "regulationTag": "RESPA",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What are 'closing costs' generally associated with?",
+      "type": "multi",
+      "options": ["Monthly utility bills for the property", "Fees and expenses paid at the end of the mortgage transaction", "The real estate agent's commission only"],
+      "correct": "Fees and expenses paid at the end of the mortgage transaction",
+      "explanation": "Closing costs cover various services like appraisal, title insurance, recording fees, etc., needed to finalize the loan.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "RESPA",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Is 'underwriting' the process of finding a buyer for a property?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, underwriting is the lender's process of evaluating the risk of a loan application by assessing the borrower's creditworthiness and the property.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Which loan type often requires Mortgage Insurance Premium (MIP), both upfront and annually?",
+      "type": "multi",
+      "options": ["VA Loan", "Conventional Loan with 20% down", "FHA Loan"],
+      "correct": "FHA Loan",
+      "explanation": "FHA loans require MIP to insure the lender against borrower default.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "FHALoan",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Does 'clear title' mean the property has no physical damage?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, clear title means ownership is free from liens, claims, or encumbrances that could challenge the owner's rights.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What does a 'co-signer' on a loan primarily do?",
+      "type": "multi",
+      "options": ["Provides temporary housing for the borrower", "Agrees to be legally responsible for the debt if the primary borrower defaults", "Conducts the property inspection before closing"],
+      "correct": "Agrees to be legally responsible for the debt if the primary borrower defaults",
+      "explanation": "A co-signer lends their creditworthiness to help the primary borrower qualify, taking on repayment responsibility if needed.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Are real estate agents typically paid based on the final loan amount?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, real estate agents are typically paid a commission based on the property's *sale price*, not the loan amount.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What is a common loan term (length) for a mortgage in the US?",
+      "type": "multi",
+      "options": ["5 years", "10 years", "30 years"],
+      "correct": "30 years",
+      "explanation": "While 15-year and other terms exist, 30 years is a very common mortgage repayment period.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Can you use a refinance loan to pay for home renovations?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "Yes, a 'cash-out refinance' allows borrowers to take out a new, larger mortgage and use the difference (cash out) for various purposes, including renovations.",
+      "loanTypeTag": "Refinance",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What does 'liability coverage' in homeowners insurance typically protect against?",
+      "type": "multi",
+      "options": ["Damage to your personal belongings from a storm", "Claims against you if someone is injured on your property", "The cost of repairing your roof after hail damage"],
+      "correct": "Claims against you if someone is injured on your property",
+      "explanation": "Liability coverage helps protect you financially if you are found legally responsible for someone else's injury or property damage.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Do USDA loans typically require a down payment?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, one of the major benefits of USDA loans for eligible rural borrowers is the potential for 0% down payment.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What does 'rate lock' mean in the mortgage process?",
+      "type": "multi",
+      "options": ["Locking the property deed in a safe deposit box", "The lender's guarantee of a specific interest rate for a set period", "Permanently locking the adjustable rate on an ARM"],
+      "correct": "The lender's guarantee of a specific interest rate for a set period",
+      "explanation": "A rate lock protects the borrower from interest rate increases while their loan application is being processed.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Is homeowners insurance mandatory for all homeowners?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "While not legally required by state law if you own the home outright, virtually all mortgage lenders require borrowers to maintain homeowners insurance as a condition of the loan.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Which type of loan typically has stricter qualifying requirements: Conventional or FHA?",
+      "type": "multi",
+      "options": ["FHA Loan", "Conventional Loan", "They have identical requirements"],
+      "correct": "Conventional Loan",
+      "explanation": "Conventional loans generally have stricter credit score and down payment requirements compared to FHA loans.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Does a 'conforming loan' typically exceed the loan limits set by Fannie Mae and Freddie Mac?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, a conforming loan *meets* the size limits and other criteria set by Fannie Mae and Freddie Mac, allowing the GSEs to purchase them.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What does 'prepaid interest' at closing typically cover?",
+      "type": "multi",
+      "options": ["Interest for the entire first year of the loan", "Interest from the closing date until the end of that month", "A fee for paying the loan off early"],
+      "correct": "Interest from the closing date until the end of that month",
+      "explanation": "Prepaid interest covers the interest accruing on the loan between your closing date and the start of your first full payment period.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "TILA",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Can you choose your own home appraiser when getting a mortgage?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "Generally, no. To ensure independence, the lender or an Appraisal Management Company (AMC) typically selects the appraiser.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "Appraisal",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What is 'foreclosure'?",
+      "type": "multi",
+      "options": ["The process of applying for a new mortgage", "A legal process where the lender takes possession of a property due to non-payment", "The final inspection of a property before purchase"],
+      "correct": "A legal process where the lender takes possession of a property due to non-payment",
+      "explanation": "Foreclosure occurs when a borrower consistently fails to make their mortgage payments, allowing the lender to seize and sell the property.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "easy"
+    }
+  ],
+  "medium": [
+    {
+      "q": "Under TRID, if certain changes occur after the Closing Disclosure is delivered, how much additional time must be provided to the borrower before closing?",
+      "type": "multi",
+      "options": ["One additional business day for review", "Three additional business days for review", "No additional time is generally required"],
+      "correct": "Three additional business days for review",
+      "explanation": "A new 3-business-day waiting period is required if: the APR changes by more than 1/8 of a percent (0.125%) for fixed-rate loans or 1/4 of a percent (0.25%) for adjustable-rate loans, a prepayment penalty is added, or the basic loan product changes.",
+      "loanTypeTag": "General",
+      "regulationTag": "TRID",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What is the 'seasoning' requirement for a property in a cash-out refinance according to most conventional guidelines?",
+      "type": "multi",
+      "options": ["The borrower must have held title for at least 3 months", "The borrower must have held title for at least 6 months", "The borrower must have held title for at least 12 months"],
+      "correct": "The borrower must have held title for at least 6 months",
+      "explanation": "Seasoning refers to the length of time a borrower has held title to a property. For most conventional cash-out refinances, the borrower must have owned the property for at least six months.",
+      "loanTypeTag": "Refinance",
+      "regulationTag": "General",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Does the Fair Housing Act only prohibit discrimination based on race and religion in housing transactions?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, the Fair Housing Act prohibits discrimination in housing based on a wider range of protected classes: race, color, national origin, religion, sex, familial status, or disability.",
+      "loanTypeTag": "General",
+      "regulationTag": "FairHousing",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What is the maximum seller contribution typically allowed on a conventional loan with a 90% Loan-to-Value (LTV) ratio?",
+      "type": "multi",
+      "options": ["3% of the sales price or appraised value", "6% of the sales price or appraised value", "9% of the sales price or appraised value"],
+      "correct": "6% of the sales price or appraised value",
+      "explanation": "For conventional loans with an LTV greater than 75% up to 90%, the maximum seller contribution is typically 6% of the lesser of the sales price or appraised value.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "General",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Are 'buydowns' exclusively paid by the property seller to reduce the buyer's interest rate?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, a buydown involves paying an upfront fee to reduce the interest rate for a specific period, and this fee can be paid by the borrower, the seller, or even a builder or other interested party.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "General",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What is the primary purpose of the Real Estate Settlement Procedures Act (RESPA)?",
+      "type": "multi",
+      "options": ["To set maximum allowable interest rates on federally related mortgage loans", "To ensure borrowers understand and can compare settlement service costs", "To regulate the practices and licensing of real estate appraisers nationally"],
+      "correct": "To ensure borrowers understand and can compare settlement service costs",
+      "explanation": "RESPA helps consumers become better shoppers for settlement services and eliminates kickbacks and referral fees that unnecessarily increase the costs of certain settlement services.",
+      "loanTypeTag": "General",
+      "regulationTag": "RESPA",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If a borrower's Debt-to-Income (DTI) ratio exceeds standard FHA limits, are they automatically ineligible for an FHA loan?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "Not necessarily. While FHA has DTI guidelines, 'compensating factors' like substantial cash reserves, minimal payment shock, or significant residual income can sometimes allow for loan approval even with a higher DTI.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "FHALoan",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What type of transaction is the 'Notice of Right to Cancel' (Right of Rescission) primarily associated with under TILA?",
+      "type": "multi",
+      "options": ["Standard purchase transactions of any property type", "Refinance of a consumer's principal dwelling", "Loans for purchasing investment or vacation properties"],
+      "correct": "Refinance of a consumer's principal dwelling",
+      "explanation": "For most refinances of a primary residence, borrowers have a three-day right to cancel the loan after signing the closing documents.",
+      "loanTypeTag": "Refinance",
+      "regulationTag": "TILA",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Does the Home Mortgage Disclosure Act (HMDA) only require lenders to report data about approved and funded loans?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, HMDA requires many financial institutions to maintain, report, and publicly disclose information about mortgage *applications* (including denied or withdrawn ones) as well as originations, to help identify discriminatory lending patterns.",
+      "loanTypeTag": "General",
+      "regulationTag": "HMDA",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What is the typical 'front-end' DTI ratio (housing expense ratio) limit for conventional loans under standard Fannie Mae guidelines?",
+      "type": "multi",
+      "options": ["Generally capped at 28% of gross monthly income", "Generally capped at 36% of gross monthly income", "Generally capped at 43% of gross monthly income"],
+      "correct": "Generally capped at 28% of gross monthly income",
+      "explanation": "The housing expense ratio (front-end DTI) is typically capped at 28% for conventional loans, though it can be higher with compensating factors. It includes PITI.",
+      "loanTypeTag": "General",
+      "regulationTag": "ATRQM",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What defines an 'Adjustable-Rate Mortgage' (ARM)?",
+      "type": "multi",
+      "options": ["A loan where the interest rate is fixed and never changes throughout the entire loan term", "A loan where the interest rate can change periodically based on a specific financial index", "A type of loan exclusively available for properties that are themselves adjustable or modular"],
+      "correct": "A loan where the interest rate can change periodically based on a specific financial index",
+      "explanation": "ARMs have an initial fixed interest rate for a period, after which the rate adjusts based on a benchmark index plus a margin.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Is 'subordination' in mortgage lending the act of one lien holder agreeing to a lower repayment priority than another existing lien holder?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "A subordination agreement changes the priority of liens. For example, a new mortgage might be subordinated to an existing one, such as a HELOC being subordinated to a refinanced first mortgage.",
+      "loanTypeTag": "Refinance",
+      "regulationTag": "General",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What does the term 'encumbrance' signify in real estate law?",
+      "type": "multi",
+      "options": ["A significant structural improvement or addition made to the property", "A legal claim, lien, charge, or liability attached to and binding real property", "The officially assessed market value of the property for taxation purposes"],
+      "correct": "A legal claim, lien, charge, or liability attached to and binding real property",
+      "explanation": "Encumbrances include liens, easements, encroachments, or restrictive covenants that can affect the property's value or transferability.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Are 'gift funds' for a down payment only acceptable if they come directly from the borrower's employer?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, gift funds are typically allowed from eligible donors like family members. Gifts from employers might be scrutinized more closely or have different requirements depending on the loan program.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "General",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What is 'force-placed insurance' in the context of a mortgage agreement?",
+      "type": "multi",
+      "options": ["A specialized insurance policy personally chosen and secured by the borrower", "Homeowners insurance obtained by the lender if the borrower fails to maintain required coverage", "A discounted group insurance policy offered through a large lending institution"],
+      "correct": "Homeowners insurance obtained by the lender if the borrower fails to maintain required coverage",
+      "explanation": "If a borrower lets their homeowners insurance lapse, the lender may purchase force-placed insurance to protect their interest, which is often more expensive than borrower-obtained insurance.",
+      "loanTypeTag": "General",
+      "regulationTag": "RESPA",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Does TILA (Truth in Lending Act) mandate that lenders disclose the Annual Percentage Rate (APR) and total finance charges to borrowers?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "TILA aims to promote the informed use of consumer credit by requiring disclosures about its terms and cost, including the APR and total finance charge.",
+      "loanTypeTag": "General",
+      "regulationTag": "TILA",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What is the 'index' used for in determining the interest rate of an Adjustable-Rate Mortgage (ARM) after its initial fixed period?",
+      "type": "multi",
+      "options": ["A factor used to determine the initial fixed interest rate of the loan", "A published benchmark interest rate to which the ARM's rate is tied", "An internal index reflecting the lender's current cost of funds"],
+      "correct": "A published benchmark interest rate to which the ARM's rate is tied",
+      "explanation": "Common indices include the SOFR (Secured Overnight Financing Rate) or U.S. Treasury rates. The ARM rate is the index plus a margin.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Is a 'construction loan' typically a long-term loan, similar to a standard 30-year mortgage, used to finance the building of a home?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, construction loans are typically short-term loans (e.g., 6-18 months) specifically to finance the building phase. They are often converted to a permanent mortgage once construction is complete.",
+      "loanTypeTag": "Construction",
+      "regulationTag": "General",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What is a 'rate lock' agreement in the mortgage origination process?",
+      "type": "multi",
+      "options": ["An informal agreement from the lender to try and lower the rate at a later date if possible", "A lender's binding promise to hold a specific interest rate for a defined period while the loan is processed", "A permanent lock on the property's purchase price negotiated between buyer and seller"],
+      "correct": "A lender's binding promise to hold a specific interest rate for a defined period while the loan is processed",
+      "explanation": "A rate lock protects the borrower from interest rate increases while their loan is being processed, typically for 30, 45, or 60 days.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Does RESPA apply to all mortgage loans?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "RESPA generally applies to 'federally related mortgage loans' for one-to-four family residential properties, but has exceptions (e.g., all-cash sales, seller financing, loans for business/commercial/agricultural purposes, temporary financing like construction loans not intended for permanent financing from the same lender).",
+      "loanTypeTag": "General",
+      "regulationTag": "RESPA",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What is 'hazard insurance' most commonly understood to be a component of?",
+      "type": "multi",
+      "options": ["A type of mortgage life insurance policy that pays off the loan upon death", "The part of homeowners insurance that covers the structure from perils like fire", "Mandatory federal flood insurance required for all properties nationwide"],
+      "correct": "The part of homeowners insurance that covers the structure from perils like fire",
+      "explanation": "Hazard insurance specifically covers the structure of your home against perils like fire, windstorms, vandalism, etc., and is a component of most homeowners insurance policies.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Is a 'prepayment penalty' a fee that some lenders might charge if a borrower pays off their loan significantly earlier than scheduled?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "Some loans include a prepayment penalty, which is a fee for paying off the loan significantly before its term ends. These are less common now, especially for Qualified Mortgages (QMs).",
+      "loanTypeTag": "General",
+      "regulationTag": "TILA",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What is a 'Qualified Mortgage' (QM) as defined by CFPB rules?",
+      "type": "multi",
+      "options": ["Any mortgage loan that has been successfully approved and funded by a lender", "A mortgage that meets certain requirements for stable features and borrower ability-to-repay", "A special type of mortgage that always carries the lowest possible market interest rate"],
+      "correct": "A mortgage that meets certain requirements for stable features and borrower ability-to-repay",
+      "explanation": "QM rules provide lenders with a presumption of compliance with the Ability-to-Repay rule if certain product features (e.g., no negative amortization, no excessive points/fees) and underwriting standards are met.",
+      "loanTypeTag": "General",
+      "regulationTag": "ATRQM",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Are 'closing costs' associated with a mortgage typically paid by the seller on behalf of the buyer?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "While sellers can contribute to closing costs (seller concessions, up to certain limits), closing costs are typically a one-time cluster of expenses that are the buyer's responsibility at loan consummation, unless negotiated otherwise.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "RESPA",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What is the 'margin' in the context of an Adjustable-Rate Mortgage (ARM)?",
+      "type": "multi",
+      "options": ["The initial fixed-rate period before the first rate adjustment occurs", "A fixed percentage added to the index value to determine the ARM's interest rate", "The maximum permissible interest rate cap over the life of the loan"],
+      "correct": "A fixed percentage added to the index value to determine the ARM's interest rate",
+      "explanation": "The fully indexed rate on an ARM is calculated by adding the margin (which is fixed for the life of the loan) to the current value of the index.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Does the Servicemembers Civil Relief Act (SCRA) only apply to mortgages taken out *after* a servicemember enters active duty?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, SCRA provides protections like interest rate caps (e.g., 6%) on pre-service obligations, including mortgages taken out *before* entering active duty, as well as other protections during active service.",
+      "loanTypeTag": "General",
+      "regulationTag": "SCRA",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What is a 'balloon payment' mortgage characterized by?",
+      "type": "multi",
+      "options": ["A mortgage structure with gradually increasing monthly payments over its entire term", "A mortgage that requires a large final payment due at the end of a shorter loan term", "A type of mortgage whose balance inflates in direct proportion to the property's market value"],
+      "correct": "A mortgage that requires a large final payment due at the end of a shorter loan term",
+      "explanation": "Balloon mortgages often have lower monthly payments for a set period (e.g., 5 or 7 years), based on a longer amortization schedule, followed by a single large principal payment to pay off the remaining balance.",
+      "loanTypeTag": "General",
+      "regulationTag": "TILA",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Is it a violation of ECOA for a lender to ask an applicant about their plans regarding having or raising children?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "ECOA prohibits inquiries about childbearing intentions or family planning, as this could be used to discriminate based on familial status or sex.",
+      "loanTypeTag": "General",
+      "regulationTag": "ECOA",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What does 'HELOC' stand for in mortgage terminology?",
+      "type": "multi",
+      "options": ["Home Equity Line of Credit", "High Earners Loan Option Contract", "Housing Expense Loan Origination Charge"],
+      "correct": "Home Equity Line of Credit",
+      "explanation": "A HELOC is a revolving line of credit that allows homeowners to borrow against their home equity, typically with a variable interest rate, and draw funds as needed up to a certain limit.",
+      "loanTypeTag": "HELOC",
+      "regulationTag": "TILA",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Are 'seller concessions' (seller contributions to buyer's closing costs) generally limited by the loan type and the Loan-to-Value (LTV) ratio?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "Yes, the maximum amount a seller can contribute towards a buyer's closing costs (seller concessions) is limited and varies depending on the loan program (FHA, VA, Conventional) and the loan-to-value ratio.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "General",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What is the 'Net Tangible Benefit' test primarily associated with in mortgage lending?",
+      "type": "multi",
+      "options": ["Determining eligibility for first-time homebuyer programs and grants", "Evaluating whether a refinance transaction provides a real financial benefit to the borrower", "Assessing the environmental impact of a new construction project before funding"],
+      "correct": "Evaluating whether a refinance transaction provides a real financial benefit to the borrower",
+      "explanation": "Many states and some loan programs require lenders to ensure a refinance offers a net tangible benefit to the borrower, preventing predatory 'loan flipping'.",
+      "loanTypeTag": "Refinance",
+      "regulationTag": "AntiPredatory",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Does the 'Mailbox Rule' apply to the delivery of the Closing Disclosure, meaning it's considered received when mailed by the lender?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, for TRID disclosures like the Closing Disclosure, the consumer must *receive* it at least 3 business days before consummation. If mailed, an additional 3 business days (for a total of 6) are generally presumed for delivery unless proven otherwise.",
+      "loanTypeTag": "General",
+      "regulationTag": "TRID",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What is a 'streamline refinance' often characterized by?",
+      "type": "multi",
+      "options": ["Requiring a new, full property appraisal and extensive income verification for all applicants", "A simplified refinancing process with reduced documentation, often for existing FHA or VA loans", "A type of refinance that significantly increases the principal loan balance to extract maximum equity"],
+      "correct": "A simplified refinancing process with reduced documentation, often for existing FHA or VA loans",
+      "explanation": "Streamline refinances (e.g., FHA Streamline, VA IRRRL) typically have less stringent underwriting requirements, such as no appraisal or minimal income verification.",
+      "loanTypeTag": "Refinance",
+      "regulationTag": "General",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Is a lender permitted under ECOA to ask about an applicant's race and ethnicity on a mortgage application for government monitoring purposes?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "Yes, for certain types of mortgage loans (like those subject to HMDA), lenders are required to ask for this information for government monitoring purposes to help prevent discrimination. However, the applicant is not required to provide it.",
+      "loanTypeTag": "General",
+      "regulationTag": "ECOA",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What are 'periodic interest rate caps' in an Adjustable-Rate Mortgage (ARM)?",
+      "type": "multi",
+      "options": ["Limits on how much the borrower's total monthly PITI payment can increase each year", "Limits on how much the interest rate can increase or decrease at each adjustment period", "The maximum interest rate that the loan can ever reach over its entire lifetime"],
+      "correct": "Limits on how much the interest rate can increase or decrease at each adjustment period",
+      "explanation": "Periodic caps restrict the amount the interest rate can change at any single adjustment date (e.g., no more than 2% up or down).",
+      "loanTypeTag": "General",
+      "regulationTag": "TILA",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Does the Fair Housing Act's prohibition against discrimination based on 'sex' also include discrimination based on sexual orientation and gender identity, according to recent HUD interpretations and some court rulings?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "Yes, HUD has issued guidance and some courts have ruled that discrimination based on sexual orientation and gender identity is a form of sex discrimination prohibited by the Fair Housing Act.",
+      "loanTypeTag": "General",
+      "regulationTag": "FairHousing",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What is 'loss mitigation' in the context of mortgage servicing?",
+      "type": "multi",
+      "options": ["Strategies used by lenders to minimize financial losses from property insurance claims", "Efforts made by mortgage servicers to work with borrowers struggling to make payments to avoid foreclosure", "Techniques for reducing the overall interest rate on a portfolio of mortgage-backed securities"],
+      "correct": "Efforts made by mortgage servicers to work with borrowers struggling to make payments to avoid foreclosure",
+      "explanation": "Loss mitigation options can include loan modifications, forbearance plans, repayment plans, or short sales.",
+      "loanTypeTag": "General",
+      "regulationTag": "RESPA",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Is a 'non-warrantable condo' generally harder to finance than a warrantable one?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "Yes, non-warrantable condos do not meet certain Fannie Mae/Freddie Mac guidelines (e.g., too many investor-owned units, ongoing litigation), making them riskier and harder to finance with conventional loans.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "General",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What does the 'Right of Setoff' allow a financial institution to do?",
+      "type": "multi",
+      "options": ["To automatically increase a borrower's credit limit without their explicit consent", "To seize funds from a borrower's deposit account to cover a defaulted debt owed to the same institution", "To sell a borrower's mortgage to another servicer on the secondary market at any time"],
+      "correct": "To seize funds from a borrower's deposit account to cover a defaulted debt owed to the same institution",
+      "explanation": "The right of setoff allows a lender to use funds in a borrower's account to cover a delinquent loan payment, subject to legal limitations.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Are 'discount points' tax-deductible for a homeowner in the year they are paid, under current IRS rules?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "Generally, points paid on a mortgage for the purchase or improvement of a principal residence can be fully deducted in the year paid, provided certain IRS conditions are met. For refinances, points are usually deducted over the life of the loan.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What is a 'novation' in the context of assuming a mortgage?",
+      "type": "multi",
+      "options": ["The process of the original borrower being fully released from liability on the loan", "A minor modification to the existing loan terms without changing the borrower", "The lender's act of forgiving a portion of the outstanding mortgage debt"],
+      "correct": "The process of the original borrower being fully released from liability on the loan",
+      "explanation": "When a mortgage is assumed with a novation, the original borrower is released from all obligations, and the new borrower becomes solely responsible.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Does the 'bona fide error' provision under TILA protect lenders from all liability for any type of disclosure error?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, the bona fide error defense is limited. It protects lenders from liability for unintentional errors if they can show they maintained procedures reasonably adapted to avoid such errors. It doesn't cover errors of legal judgment.",
+      "loanTypeTag": "General",
+      "regulationTag": "TILA",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What is the 'par rate' in mortgage pricing?",
+      "type": "multi",
+      "options": ["The lowest possible interest rate a lender will offer on any given day", "The interest rate a lender offers that requires no discount points to be paid by the borrower", "The average interest rate of all mortgages originated in the previous quarter"],
+      "correct": "The interest rate a lender offers that requires no discount points to be paid by the borrower",
+      "explanation": "The par rate is the base rate before any adjustments for discount points (to lower the rate) or lender credits (for a higher rate).",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Is a lender always required to establish an escrow account for HPMLs (Higher-Priced Mortgage Loans)?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "Yes, for first-lien HPMLs, lenders are generally required to establish and maintain an escrow account for property taxes and homeowners insurance for at least the first five years of the loan, with some exceptions.",
+      "loanTypeTag": "General",
+      "regulationTag": "TILA",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What does 'SRP' (Service Release Premium) represent in the secondary mortgage market?",
+      "type": "multi",
+      "options": ["A fee paid by the borrower to release their loan from servicing obligations", "A payment received by a lender when selling a mortgage and its servicing rights to an investor", "The standardized rate a servicer charges for performing loan administration duties"],
+      "correct": "A payment received by a lender when selling a mortgage and its servicing rights to an investor",
+      "explanation": "SRP is a component of the price an investor pays for a loan, compensating the originating lender for the future income stream from servicing the loan.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Are 'Non-Traditional Mortgage Products' (e.g., interest-only, payment-option ARMs) subject to stricter underwriting and disclosure requirements than standard fixed-rate loans?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "Yes, due to their higher risk, non-traditional mortgage products are subject to more stringent guidance, underwriting standards, and consumer protection disclosures to ensure borrowers understand their terms and risks.",
+      "loanTypeTag": "General",
+      "regulationTag": "ATRQM",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What is the '4 C's of Underwriting' a common framework for?",
+      "type": "multi",
+      "options": ["Evaluating a property's condition, construction, community, and cost", "Assessing a borrower's Credit, Capacity (to repay), Capital (assets), and Collateral", "Categorizing loan types into Conventional, Conforming, Construction, and Cash-out"],
+      "correct": "Assessing a borrower's Credit, Capacity (to repay), Capital (assets), and Collateral",
+      "explanation": "These four factors provide a comprehensive framework for lenders to evaluate the risk associated with a mortgage application.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Is a 'deficiency judgment' possible in all states if a foreclosure sale does not cover the full mortgage debt?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, state laws vary. Some states are 'non-recourse' states where lenders cannot pursue a deficiency judgment after foreclosure on a primary residence, while others allow it under certain conditions.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What does 'FNMA' commonly refer to in the mortgage industry?",
+      "type": "multi",
+      "options": ["Federal National Mortgage Association (Fannie Mae)", "Financial Network and Management Agency", "First National Mortgage Approval service"],
+      "correct": "Federal National Mortgage Association (Fannie Mae)",
+      "explanation": "Fannie Mae is a government-sponsored enterprise (GSE) that buys mortgages from lenders to provide liquidity in the housing market.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Are lenders required by the FCRA to provide a 'Risk-Based Pricing Notice' if they offer a borrower credit on less favorable terms due to their credit report information?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "Yes, if a lender uses a consumer report to grant credit on terms that are materially less favorable than the most favorable terms available to a substantial proportion of consumers, they must provide a Risk-Based Pricing Notice.",
+      "loanTypeTag": "General",
+      "regulationTag": "FCRA",
+      "difficulty": "medium"
+    },
+    { "q": "What does 'FHLMC' commonly refer to in the mortgage industry?",
+      "type": "multi",
+      "options": ["Federal Home Loan Mortgage Corporation (Freddie Mac)", "Federal Housing Lender Management Committee", "First Home Loan Mortgage Commitment"],
+      "correct": "Federal Home Loan Mortgage Corporation (Freddie Mac)",
+      "explanation": "Freddie Mac is a government-sponsored enterprise (GSE), similar to Fannie Mae, that operates in the secondary mortgage market.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "medium"
+    }
+  ],
+  "hard": [
+    {
+      "q": "Under ECOA, within how many days must a lender notify an applicant of an adverse action taken on a completed credit application?",
+      "type": "multi",
+      "options": ["Within 15 calendar days of receiving the completed application", "Within 30 calendar days of receiving the completed application", "Within 60 calendar days of receiving the completed application"],
+      "correct": "Within 30 calendar days of receiving the completed application",
+      "explanation": "Lenders must notify applicants of action taken (approval, counteroffer, or adverse action) within 30 days after receiving a completed application.",
+      "loanTypeTag": "General",
+      "regulationTag": "ECOA",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What is the 'Ability-to-Repay' (ATR) rule, established under Dodd-Frank, primarily designed to prevent in mortgage lending?",
+      "type": "multi",
+      "options": ["Lenders from charging excessively high or predatory interest rates on all loans", "Lenders making mortgage loans without a reasonable, good-faith determination of the borrower's ability to repay", "Discriminatory lending practices based on protected classes outlined in fair lending laws"],
+      "correct": "Lenders making mortgage loans without a reasonable, good-faith determination of the borrower's ability to repay",
+      "explanation": "The ATR rule, part of Dodd-Frank, requires lenders to make a reasonable, good-faith determination that consumers have the ability to repay their mortgage loans based on verified information.",
+      "loanTypeTag": "General",
+      "regulationTag": "ATRQM",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Which specific section of RESPA (Real Estate Settlement Procedures Act) expressly prohibits kickbacks and unearned fees for referrals of settlement services?",
+      "type": "multi",
+      "options": ["RESPA Section 6 (Servicing)", "RESPA Section 8 (Kickbacks)", "RESPA Section 10 (Escrow)"],
+      "correct": "RESPA Section 8 (Kickbacks)",
+      "explanation": "Section 8 of RESPA prohibits any person from giving or accepting a fee, kickback, or anything of value for referrals of settlement service business involving a federally related mortgage loan.",
+      "loanTypeTag": "General",
+      "regulationTag": "RESPA",
+      "difficulty": "hard"
+    },
+    {
+      "q": "For a loan to be considered a 'Qualified Mortgage' (QM), what is the general cap on points and fees for loans of $110,260 or more (indexed annually)?",
+      "type": "multi",
+      "options": ["Generally cannot exceed 1% of the total loan amount", "Generally cannot exceed 3% of the total loan amount", "Generally cannot exceed 5% of the total loan amount"],
+      "correct": "Generally cannot exceed 3% of the total loan amount",
+      "explanation": "For a loan to be a QM, points and fees generally cannot exceed 3% of the total loan amount for loans of $110,260 or more (as of 2023, adjusted annually). Specific thresholds apply for smaller loan amounts.",
+      "loanTypeTag": "General",
+      "regulationTag": "ATRQM",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Is a 'Higher-Priced Mortgage Loan' (HPML) under TILA defined by its Annual Percentage Rate (APR) exceeding the Average Prime Offer Rate (APOR) by a specific percentage margin?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "Yes, an HPML is a consumer credit transaction secured by the consumer's principal dwelling with an APR that exceeds APOR by 1.5% for first liens, 2.5% for jumbo first liens, or 3.5% for subordinate liens.",
+      "loanTypeTag": "General",
+      "regulationTag": "TILA",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What is the 'tolerancia de cero' (zero tolerance) category under TRID for changes in closing costs between the Loan Estimate and Closing Disclosure?",
+      "type": "multi",
+      "options": ["Fees paid to the creditor, mortgage broker, or an affiliate of either; transfer taxes", "Recording fees and certain third-party services where the borrower chooses the provider", "Prepaid interest, property insurance premiums, and initial escrow account deposits"],
+      "correct": "Fees paid to the creditor, mortgage broker, or an affiliate of either; transfer taxes",
+      "explanation": "Zero tolerance means these fees cannot increase at closing from what was disclosed on the Loan Estimate. This includes lender fees, transfer taxes, and appraisal fees if the lender selects the appraiser or the appraiser is an affiliate.",
+      "loanTypeTag": "General",
+      "regulationTag": "TRID",
+      "difficulty": "hard"
+    },
+    {
+      "q": "If a borrower exercises their right of rescission on an eligible refinance transaction, is the lender required to refund only the principal amount paid by the consumer?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, after the lender receives a valid notice of rescission, they have 20 calendar days to return *all* money or property given by the consumer in connection with the transaction, including any finance charges or fees already paid.",
+      "loanTypeTag": "Refinance",
+      "regulationTag": "TILA",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Does the SAFE Act (Secure and Fair Enforcement for Mortgage Licensing Act) only apply to Mortgage Loan Originators working for depository institutions (banks)?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, the SAFE Act requires all MLOs, whether working for depository institutions (who must be federally registered) or non-depository institutions (who must be state-licensed and federally registered), to be registered with the NMLS.",
+      "loanTypeTag": "General",
+      "regulationTag": "SAFEAct",
+      "difficulty": "hard"
+    },
+    {
+      "q": "How is the maximum loan amount for an FHA-insured loan primarily determined for a specific geographic area?",
+      "type": "multi",
+      "options": ["By a single, fixed national standard loan limit applicable to all U.S. counties", "Based on county-level median home prices, subject to a national floor and ceiling", "Solely by the individual borrower's income and credit qualification metrics"],
+      "correct": "Based on county-level median home prices, subject to a national floor and ceiling",
+      "explanation": "FHA loan limits vary by county and are based on a percentage of the area's median home price, subject to a national floor and ceiling, which are updated annually.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "FHALoan",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Under TILA's advertising rules (Regulation Z), if an advertisement for credit contains a 'triggering term' (such as the down payment amount), what additional disclosures must also be made clearly and conspicuously?",
+      "type": "multi",
+      "options": ["Only the Annual Percentage Rate (APR) needs to be disclosed further", "The amount or percentage of the down payment, terms of repayment, and the APR", "The lender's NMLS ID and contact information for inquiries must be stated"],
+      "correct": "The amount or percentage of the down payment, terms of repayment, and the APR",
+      "explanation": "If an ad for credit states specific credit terms (triggering terms), it must state only those terms that actually are or will be arranged or offered by the creditor. Additional required disclosures include the amount/percentage of down payment, terms of repayment, and the APR.",
+      "loanTypeTag": "General",
+      "regulationTag": "TILA",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What does the Loan Originator Compensation Rule, implemented under TILA, primarily aim to address regarding MLO payments?",
+      "type": "multi",
+      "options": ["Setting maximum allowable loan amounts that an MLO can originate per year", "Regulating how MLOs can be paid to prevent steering consumers to less favorable loan terms", "Establishing minimum credit score requirements for borrowers working with MLOs"],
+      "correct": "Regulating how MLOs can be paid to prevent steering consumers to less favorable loan terms",
+      "explanation": "This rule, part of Dodd-Frank and TILA, aims to prevent MLOs from steering consumers to loans with less favorable terms (e.g., higher rates) in order to increase their own compensation. Compensation generally cannot be based on loan terms other than the loan amount.",
+      "loanTypeTag": "General",
+      "regulationTag": "TILA",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Is a lender only required to provide an applicant with a summary of the appraisal report, not the full report, under the ECOA Valuation Rule?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, lenders must provide applicants with *copies of all appraisals and other written valuations* developed in connection with an application for credit to be secured by a first lien on a dwelling, not just a summary.",
+      "loanTypeTag": "General",
+      "regulationTag": "ECOA",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What disclosure form did the Loan Estimate (LE) primarily replace under the TRID (TILA-RESPA Integrated Disclosure) rules for most mortgage transactions?",
+      "type": "multi",
+      "options": ["The final Closing Disclosure (CD) and the HUD-1 Settlement Statement", "The Good Faith Estimate (GFE) and the initial Truth-in-Lending (TIL) disclosure", "The Uniform Residential Loan Application (URLA/1003) and the credit report authorization"],
+      "correct": "The Good Faith Estimate (GFE) and the initial Truth-in-Lending (TIL) disclosure",
+      "explanation": "The Loan Estimate (LE) replaced the initial Good Faith Estimate (GFE) and the initial Truth-in-Lending disclosure for most mortgage transactions as part of the TRID rule, effective October 2015.",
+      "loanTypeTag": "General",
+      "regulationTag": "TRID",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Are 'yield spread premiums' (YSPs), where an MLO's compensation increases for originating a loan at a higher interest rate, generally permitted if disclosed to the borrower?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, YSPs, as a form of compensation based on the interest rate of the loan, are generally prohibited under current Loan Originator Compensation rules, regardless of disclosure. MLO compensation cannot be based on the loan's terms or conditions (like interest rate), with limited exceptions.",
+      "loanTypeTag": "General",
+      "regulationTag": "TILA",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What is the 'Section 32' designation under the Home Ownership and Equity Protection Act (HOEPA) used to identify?",
+      "type": "multi",
+      "options": ["Standard conventional mortgage loans that meet all Fannie Mae guidelines", "High-cost mortgages that meet specific APR or points and fees thresholds", "Government-insured loans such as FHA or VA guaranteed mortgages"],
+      "correct": "High-cost mortgages that meet specific APR or points and fees thresholds",
+      "explanation": "Section 32 loans are high-cost mortgages that meet certain APR or points and fees thresholds defined by HOEPA, subjecting them to additional disclosure requirements, restrictions on terms, and pre-loan counseling.",
+      "loanTypeTag": "General",
+      "regulationTag": "HOEPA",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Does the Gramm-Leach-Bliley Act (GLBA) only require financial institutions to provide privacy notices if they intend to share nonpublic personal information with nonaffiliated third parties?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "GLBA requires financial institutions to provide initial and annual privacy notices to their customers regarding their information collection and sharing practices, regardless of whether they share with nonaffiliated third parties. The notice must also describe the customer's right to opt out of certain sharing.",
+      "loanTypeTag": "General",
+      "regulationTag": "GLBA",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What is a 'Tolerance Cure' in the context of TRID and discrepancies between the Loan Estimate and Closing Disclosure?",
+      "type": "multi",
+      "options": ["A process for fixing a borrower's disputed credit report information prior to closing", "A refund provided to the borrower if certain closing costs exceed legal tolerance limits", "A legal procedure to cure defects found in the property's title search results"],
+      "correct": "A refund provided to the borrower if certain closing costs exceed legal tolerance limits",
+      "explanation": "If fees subject to tolerance limitations (zero, 10% cumulative) increase beyond the permitted amounts at closing, the lender must refund the excess amount to the borrower within 60 calendar days after consummation.",
+      "loanTypeTag": "General",
+      "regulationTag": "TRID",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Is 'redlining,' the practice of denying or limiting financial services to residents of specific geographic areas based on race or ethnicity, an illegal discriminatory practice under both the Fair Housing Act and ECOA?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "Redlining is an illegal discriminatory practice under the Fair Housing Act and the Equal Credit Opportunity Act, as it results in unequal access to credit and housing opportunities based on prohibited characteristics of a neighborhood's residents.",
+      "loanTypeTag": "General",
+      "regulationTag": "FairHousing",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What is the 'look-back period' typically used by lenders for determining the index value for an upcoming interest rate adjustment on an Adjustable-Rate Mortgage (ARM)?",
+      "type": "multi",
+      "options": ["The specific index value published on the exact day the rate adjustment is scheduled to occur", "A predefined period (e.g., 30, 45, or 60 days) before the rate adjustment date", "The average index value calculated over the entire preceding calendar year before adjustment"],
+      "correct": "A predefined period (e.g., 30, 45, or 60 days) before the rate adjustment date",
+      "explanation": "Lenders typically look back a set number of days (e.g., 30, 45, or 60 days) before the scheduled interest rate change date to determine the specific index value that will be used for the upcoming rate adjustment, as disclosed in the loan documents.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Does RESPA Section 10 allow lenders to require borrowers to keep an unlimited amount in an escrow account as a cushion?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, RESPA Section 10 limits the cushion a lender can require in an escrow account to an amount no greater than 1/6th (two months) of the estimated total annual disbursements from the account.",
+      "loanTypeTag": "General",
+      "regulationTag": "RESPA",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What is a 'simultaneous second' mortgage, often referred to as a 'piggyback' loan?",
+      "type": "multi",
+      "options": ["A complete refinance transaction that replaces an existing second mortgage with a new one", "A second mortgage loan that is originated and closes at the same time as the first mortgage", "A mortgage that automatically converts to a second lien position after an initial period"],
+      "correct": "A second mortgage loan that is originated and closes at the same time as the first mortgage",
+      "explanation": "Often used to avoid PMI on the first mortgage by keeping its LTV at 80% or below (e.g., an 80% first mortgage, 10% second mortgage, and 10% down payment, known as an 80-10-10 structure).",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "General",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Is 'steering' borrowers towards particular loan products to increase the loan originator's compensation, rather than based on the borrower's best interest, a prohibited practice under lending regulations?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "Steering is unethical and often illegal, particularly if it results in the borrower receiving less favorable terms. The Loan Originator Compensation Rule specifically aims to prevent such practices by generally prohibiting compensation based on loan terms.",
+      "loanTypeTag": "General",
+      "regulationTag": "TILA",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What is the maximum allowable total monthly Debt-to-Income (DTI) ratio for a loan to generally be considered a 'General Qualified Mortgage' (QM) under the CFPB's rules, assuming other QM criteria are also met?",
+      "type": "multi",
+      "options": ["Generally must not exceed 36% of the borrower's gross monthly income", "Generally must not exceed 43% of the borrower's gross monthly income", "Generally must not exceed 50% of the borrower's gross monthly income"],
+      "correct": "Generally must not exceed 43% of the borrower's gross monthly income",
+      "explanation": "For a loan to meet the General QM definition based on DTI, the borrower's total monthly DTI ratio must generally be no more than 43%, although there are other ways to achieve QM status (e.g., Appendix Q, or being eligible for purchase by GSEs).",
+      "loanTypeTag": "General",
+      "regulationTag": "ATRQM",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Are 'Affiliated Business Arrangements' (AfBAs), where a settlement service provider refers a borrower to an affiliated company, required to be disclosed to the consumer under RESPA?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "Yes, RESPA requires disclosure of AfBAs at or before the time of referral. The disclosure must inform consumers about the relationship between referring parties and providers of settlement services, estimate the charges of the referred provider, and state that the consumer is not required to use the affiliated provider.",
+      "loanTypeTag": "General",
+      "regulationTag": "RESPA",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What does 'consummation' of a mortgage loan signify, as defined by the TRID rule?",
+      "type": "multi",
+      "options": ["The date when the loan application is officially submitted by the borrower to the lender", "The point in time when the borrower becomes contractually obligated to the creditor on the loan", "The specific date when the loan funds are disbursed to the seller or for a refinance"],
+      "correct": "The point in time when the borrower becomes contractually obligated to the creditor on the loan",
+      "explanation": "Consummation is the point in time that a consumer becomes contractually obligated on a credit transaction. This is a key date for TRID timing requirements and may not always be the same as the closing or settlement date, depending on state law.",
+      "loanTypeTag": "General",
+      "regulationTag": "TRID",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Does UDAAP, enforced by the CFPB, stand for 'Unfair, Deceptive, or Abusive Acts or Practices' in relation to consumer financial products and services?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "UDAAP is a key concept enforced by the CFPB. Financial institutions are prohibited from engaging in practices that are unfair, deceptive, or abusive in connection with any transaction with a consumer for a consumer financial product or service, or the offering of a consumer financial product or service.",
+      "loanTypeTag": "General",
+      "regulationTag": "UDAAP",
+      "difficulty": "hard"
+    },
+    {
+      "q": "For Higher-Priced Mortgage Loans (HPMLs), is a second appraisal always required regardless of how long the seller has owned the property?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, a second appraisal for HPMLs is typically required only if the seller acquired the property within certain recent timeframes (e.g., 0-90 days or 91-180 days prior to the consumer's agreement) AND the new sale price exceeds specific percentage thresholds over the seller's acquisition price.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "TILA",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What is the primary regulatory function of the 'MAP Rule' (Mortgage Acts and Practices - Advertising), also known as Regulation N?",
+      "type": "multi",
+      "options": ["To establish specific regulations for maximum allowable mortgage interest rates and fees", "To prohibit misrepresentations in any commercial communication regarding mortgage credit products", "To set forth mandatory standards and qualifications for licensed real estate appraisers"],
+      "correct": "To prohibit misrepresentations in any commercial communication regarding mortgage credit products",
+      "explanation": "The MAP Rule, Regulation N, issued by the CFPB, prohibits material misrepresentations in any commercial communication regarding any term of any mortgage credit product, to protect consumers from misleading advertising.",
+      "loanTypeTag": "General",
+      "regulationTag": "MAP",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Are 'reverse mortgages,' such as HECMs, only available to homeowners who have fully paid off their existing mortgage?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, while any existing mortgage lien must be satisfied, proceeds from the reverse mortgage itself can be used to pay off an existing mortgage. The key is that the reverse mortgage becomes the primary (or only) lien.",
+      "loanTypeTag": "Refinance",
+      "regulationTag": "General",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Under the Ability-to-Repay/Qualified Mortgage (ATR/QM) rule, which of the following is NOT one of the eight specific underwriting factors a creditor must consider and verify for a borrower?",
+      "type": "multi",
+      "options": ["The borrower's current or reasonably expected income or assets available for repayment", "The borrower's highest level of educational background and professional certifications achieved", "The borrower's credit history, including patterns of borrowing and repayment", "The borrower's monthly debt-to-income ratio or residual income after all debts"],
+      "correct": "The borrower's highest level of educational background and professional certifications achieved",
+      "explanation": "The eight ATR underwriting factors are: (1) current or reasonably expected income or assets; (2) current employment status (if relying on employment income); (3) the monthly payment on the covered transaction; (4) the monthly payment on any simultaneous loan; (5) the monthly payment for mortgage-related obligations; (6) current debt obligations, alimony, and child support; (7) the monthly debt-to-income ratio or residual income; and (8) credit history.",
+      "loanTypeTag": "General",
+      "regulationTag": "ATRQM",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What is the 'Average Prime Offer Rate' (APOR) primarily used for in mortgage regulation?",
+      "type": "multi",
+      "options": ["To set the maximum allowable interest rate for all conventional mortgage loans", "As a benchmark rate to determine if a loan is a Higher-Priced Mortgage Loan (HPML)", "To calculate the daily adjustment for the index on Adjustable-Rate Mortgages (ARMs)"],
+      "correct": "As a benchmark rate to determine if a loan is a Higher-Priced Mortgage Loan (HPML)",
+      "explanation": "APOR is an annual percentage rate derived from average interest rates, points, and other loan pricing terms offered to consumers by a representative sample of creditors for mortgage transactions that have low-risk pricing characteristics.",
+      "loanTypeTag": "General",
+      "regulationTag": "TILA",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Does the 'materiality' standard under UDAAP mean that a deceptive act or practice must be likely to affect a consumer's choice or conduct regarding a product or service?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "Yes, for an act or practice to be considered deceptive under UDAAP, a representation, omission, or practice must be material – meaning it is likely to affect a consumer's decision-making or conduct concerning the product or service.",
+      "loanTypeTag": "General",
+      "regulationTag": "UDAAP",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What is the 'Temporary Buydown' disclosure requirement under TILA (Regulation Z)?",
+      "type": "multi",
+      "options": ["Lenders must disclose only the initial reduced interest rate and payment amount clearly", "Lenders must disclose the length of the buydown period, the initial and subsequent payment amounts, and the APR", "Lenders are prohibited from offering temporary buydowns on any federally related mortgage loans"],
+      "correct": "Lenders must disclose the length of the buydown period, the initial and subsequent payment amounts, and the APR",
+      "explanation": "TILA requires specific disclosures for temporary buydowns to ensure consumers understand the payment schedule and how it changes after the buydown period ends.",
+      "loanTypeTag": "General",
+      "regulationTag": "TILA",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Is a creditor generally required to re-disclose the Loan Estimate if a borrower requests a change to the loan amount or product after the initial LE was provided?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "Yes, a borrower-requested change (a valid changed circumstance) that affects settlement charges or loan terms generally permits the creditor to issue a revised Loan Estimate within three business days of receiving information sufficient to establish the changed circumstance.",
+      "loanTypeTag": "General",
+      "regulationTag": "TRID",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What is the 'presumption of compliance' for a Qualified Mortgage (QM) regarding the Ability-to-Repay (ATR) rule?",
+      "type": "multi",
+      "options": ["It guarantees the borrower will never default on the loan if all QM criteria are met", "It provides the lender a safe harbor or rebuttable presumption that they complied with the ATR rule", "It means the loan is automatically insured by a federal government agency against losses"],
+      "correct": "It provides the lender a safe harbor or rebuttable presumption that they complied with the ATR rule",
+      "explanation": "Depending on whether the QM is higher-priced or not, it receives either a conclusive (safe harbor) or rebuttable presumption of compliance with the ATR rule.",
+      "loanTypeTag": "General",
+      "regulationTag": "ATRQM",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Are 'Mortgage Servicing Rights' (MSRs) considered intangible assets that can be bought and sold separately from the underlying mortgage loan itself?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "Yes, MSRs represent the contractual right to service a mortgage (collect payments, manage escrow, etc.) and are often treated as separate intangible assets that can be retained by the originator or sold to specialized mortgage servicers.",
+      "loanTypeTag": "General",
+      "regulationTag": "RESPA",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What is the 'force majeure' concept in the context of TRID's timing requirements for disclosures?",
+      "type": "multi",
+      "options": ["A mandatory fee charged by the lender if the borrower forces a change in the closing date", "An extraordinary event or circumstance beyond the control of the parties that may excuse delays", "A legal clause allowing the lender to accelerate the loan due date if the borrower defaults"],
+      "correct": "An extraordinary event or circumstance beyond the control of the parties that may excuse delays",
+      "explanation": "While TRID has strict timing, certain bona fide personal financial emergencies or specific 'force majeure' type events (like natural disasters affecting mail delivery) might, under very limited circumstances, impact delivery presumptions or waiting periods, though this is narrowly defined.",
+      "loanTypeTag": "General",
+      "regulationTag": "TRID",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Is a lender prohibited by RESPA Section 9 from requiring, as a condition of sale, that a buyer purchase title insurance from a particular title company chosen by the seller?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "Yes, RESPA Section 9 prohibits a seller from requiring the home buyer to use a particular title insurance company, either directly or indirectly, as a condition of sale. Buyers are allowed to shop for and choose their own title insurance provider.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "RESPA",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What is the 'appraisal independence' requirement under TILA designed to ensure?",
+      "type": "multi",
+      "options": ["That appraisers are directly employed by the mortgage loan originator for better control", "That appraisers are free from coercion or undue influence when conducting valuations", "That all appraisals for federally related transactions are performed by government employees"],
+      "correct": "That appraisers are free from coercion or undue influence when conducting valuations",
+      "explanation": "The appraisal independence rules aim to ensure that appraisals are accurate and impartial by prohibiting attempts to influence the appraiser's judgment or valuation.",
+      "loanTypeTag": "General",
+      "regulationTag": "TILA",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Are 'construction-to-permanent' loans, when disclosed as a single transaction, subject to TRID's integrated disclosure requirements?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "Yes, if a construction-to-permanent loan is disclosed as one transaction, it is generally subject to TRID's Loan Estimate and Closing Disclosure requirements. If disclosed as two separate transactions, TRID applies to the permanent financing phase.",
+      "loanTypeTag": "Construction",
+      "regulationTag": "TRID",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What is the 'significant figures' rule for disclosing percentages like the APR on the Loan Estimate and Closing Disclosure?",
+      "type": "multi",
+      "options": ["Percentages must always be rounded to the nearest whole number for simplicity", "The APR must generally be disclosed to two decimal places, but can be rounded to three under certain conditions", "Percentages must be disclosed to at least four decimal places for maximum accuracy"],
+      "correct": "The APR must generally be disclosed to two decimal places, but can be rounded to three under certain conditions",
+      "explanation": "Generally, the APR is disclosed to two decimal places (e.g., 3.25%). However, Regulation Z allows rounding to the nearest one-eighth of one percent (0.125%), which can result in three decimal places.",
+      "loanTypeTag": "General",
+      "regulationTag": "TILA",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Does the 'Notice of Incomplete Application' under ECOA require the creditor to specify the information needed and provide a reasonable time for the applicant to furnish it?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "Yes, if an application is incomplete, the creditor must notify the applicant within 30 days, specifying the information needed, providing a reasonable period to submit it, and informing the applicant that failure to provide the information will result in no further consideration of the application.",
+      "loanTypeTag": "General",
+      "regulationTag": "ECOA",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What is the 'bona fide personal financial emergency' waiver in relation to the TRID 3-day waiting period for the Closing Disclosure?",
+      "type": "multi",
+      "options": ["A standard waiver that borrowers can sign at application to expedite any future closing", "A specific, limited circumstance where a borrower can waive the 3-day waiting period due to an urgent need", "A lender's internal process to bypass TRID requirements if they declare a system emergency"],
+      "correct": "A specific, limited circumstance where a borrower can waive the 3-day waiting period due to an urgent need",
+      "explanation": "Borrowers can waive the 3-day waiting period only if they have a bona fide personal financial emergency, which must be documented with a dated written statement describing the emergency and specifically modifying or waiving the waiting period.",
+      "loanTypeTag": "General",
+      "regulationTag": "TRID",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Are 'synthetic identity fraud' schemes a growing concern in mortgage fraud, involving fabricated identities rather than stolen ones?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "Yes, synthetic identity fraud, where criminals combine real and fake information to create a new, fictitious identity, is a significant and growing challenge in the financial industry, including mortgage lending.",
+      "loanTypeTag": "General",
+      "regulationTag": "Fraud",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What is the 'Fiduciary Duty' of a mortgage broker to a borrower, as defined by some state laws (though not universally federally mandated for all originators)?",
+      "type": "multi",
+      "options": ["A duty to simply process the loan application as submitted by the borrower without offering advice", "A legal or ethical relationship of trust with a duty to act primarily for the borrower's benefit in a transaction", "An obligation to find the absolute lowest interest rate available from any lender in the entire market"],
+      "correct": "A legal or ethical relationship of trust with a duty to act primarily for the borrower's benefit in a transaction",
+      "explanation": "While not a universal federal standard for all MLOs, some state laws or specific agency relationships may impose a fiduciary duty on mortgage brokers, requiring them to act in their client's best financial interest.",
+      "loanTypeTag": "General",
+      "regulationTag": "Ethics",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Is a 'silent second' mortgage, where a second lien is not disclosed to the primary lender, a legal and acceptable way to finance a down payment?",
+      "type": "yesno",
+      "correct": false,
+      "explanation": "No, a 'silent second' mortgage is a form of mortgage fraud. All liens and sources of funds for a down payment must be disclosed to the primary lender, as they impact the overall risk assessment and loan qualification.",
+      "loanTypeTag": "Purchase",
+      "regulationTag": "Fraud",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What does 'disparate impact' refer to in fair lending compliance?",
+      "type": "multi",
+      "options": ["A lender intentionally treating applicants differently based on a prohibited characteristic", "A lender's seemingly neutral policy or practice that has a disproportionately negative effect on a protected class, even without discriminatory intent", "The financial impact on a borrower resulting from a loan denial or less favorable terms"],
+      "correct": "A lender's seemingly neutral policy or practice that has a disproportionately negative effect on a protected class, even without discriminatory intent",
+      "explanation": "Disparate impact occurs when a policy, though applied equally, results in adverse outcomes for a protected group and is not justified by a legitimate business necessity that cannot be achieved by less discriminatory means.",
+      "loanTypeTag": "General",
+      "regulationTag": "FairLending",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Are 'early payment defaults' (EPDs) a significant concern for lenders and investors in the mortgage industry, often indicating potential underwriting or fraud issues?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "Yes, an EPD (typically a loan that becomes 60 or 90 days delinquent within the first 6-12 months) is a red flag, often triggering reviews and potential repurchase demands from investors due to concerns about origination quality or fraud.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What is the primary purpose of the 'Suspicious Activity Report' (SAR) filing requirement under the Bank Secrecy Act (BSA) for mortgage lenders?",
+      "type": "multi",
+      "options": ["To report all high-value loan transactions exceeding $500,000 to the IRS for tax monitoring", "To report known or suspected criminal violations or suspicious transactions indicative of money laundering or fraud", "To provide a monthly summary of all originated mortgage loans to the Consumer Financial Protection Bureau"],
+      "correct": "To report known or suspected criminal violations or suspicious transactions indicative of money laundering or fraud",
+      "explanation": "Financial institutions, including mortgage lenders, are required to file SARs with FinCEN when they detect suspicious activities that might indicate money laundering, terrorist financing, or other financial crimes.",
+      "loanTypeTag": "General",
+      "regulationTag": "BSA",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Is 'blockbusting' an illegal practice under the Fair Housing Act where individuals try to induce panic selling by predicting a change in neighborhood demographics?",
+      "type": "yesno",
+      "correct": true,
+      "explanation": "Yes, blockbusting (also known as panic peddling) is an illegal discriminatory practice where individuals encourage homeowners to sell their properties by making claims that the entry of persons of a particular race, religion, or other protected class will devalue the neighborhood.",
+      "loanTypeTag": "General",
+      "regulationTag": "FairHousing",
+      "difficulty": "hard"
+    },
+    { "q": "What does 'MERS' stand for in the context of mortgage tracking?",
+      "type": "multi",
+      "options": ["Mortgage Electronic Registration Systems, Inc.", "Mortgage Equity Realignment Service", "Multiple Entity Reporting Standard"],
+      "correct": "Mortgage Electronic Registration Systems, Inc.",
+      "explanation": "MERS is a private system that simplifies tracking ownership and servicing rights of mortgages by acting as the mortgagee of record in county land records.",
+      "loanTypeTag": "General",
+      "regulationTag": "General",
+      "difficulty": "hard"
+    },
+    { "q": "Under the BSA/AML rules, what is a primary component of a Customer Identification Program (CIP)?",
+      "type": "multi",
+      "options": ["Verifying the customer's investment portfolio performance", "Collecting and verifying key identifying information for new customers", "Determining the customer's preferred communication method"],
+      "correct": "Collecting and verifying key identifying information for new customers",
+      "explanation": "CIP requires financial institutions to implement procedures to verify the identity of any person seeking to open an account, to the extent reasonable and practicable.",
+      "loanTypeTag": "General",
+      "regulationTag": "BSA",
+      "difficulty": "hard"
+    }
+  ]
+}

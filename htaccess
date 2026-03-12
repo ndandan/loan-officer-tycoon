@@ -1,0 +1,94 @@
+# Apache Server Configuration File (.htaccess)
+
+# ----------------------------------------------------------------------
+# Directory Index
+# ----------------------------------------------------------------------
+# Set the default file to serve when a directory is requested.
+DirectoryIndex index.html
+
+# ----------------------------------------------------------------------
+# Force HTTPS (Secure Connection)
+# ----------------------------------------------------------------------
+# Redirect all HTTP traffic to HTTPS for better security.
+# Ensure your server has an SSL certificate configured for this to work.
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# ----------------------------------------------------------------------
+# Content Security Policy (CSP)
+# ----------------------------------------------------------------------
+# Helps to detect and mitigate certain types of attacks, including XSS and data injection.
+# This is a moderately strict policy; adjust as needed for your specific resources.
+# 'self' refers to the origin from which the protected document is being served.
+# data: allows data URIs (e.g., for the emoji favicon).
+# https://cdn.jsdelivr.net for Bootstrap CSS & JS.
+# https://placehold.co for placeholder images.
+# https://fonts.googleapis.com and https://fonts.gstatic.com for Google Fonts (if you add any).
+#
+# IMPORTANT: If you add other external resources (scripts, images, fonts, etc.),
+# you MUST update this policy to whitelist their origins.
+Header set Content-Security-Policy "default-src 'self'; \
+script-src 'self' https://cdn.jsdelivr.net; \
+style-src 'self' https://cdn.jsdelivr.net https://fonts.googleapis.com; \
+img-src 'self' https://placehold.co data:; \
+font-src 'self' https://fonts.gstatic.com; \
+connect-src 'self'; \
+media-src 'self'; \
+object-src 'none'; \
+frame-ancestors 'none';"
+
+# ----------------------------------------------------------------------
+# Cross-Origin Resource Sharing (CORS) for Specific File Types
+# ----------------------------------------------------------------------
+# Allow specific file types to be requested from any origin if needed.
+# For a self-contained game, this might not be strictly necessary unless
+# you have specific cross-origin use cases.
+# <FilesMatch "\.(csv|png|json|mp3)$">
+#   Header set Access-Control-Allow-Origin "*"
+# </FilesMatch>
+# Note: The CSP above is generally a better primary defense.
+# If using CORS, ensure it's for intended purposes.
+
+# ----------------------------------------------------------------------
+# Browser Caching for Static Files (Performance Boost)
+# ----------------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css                        "access plus 1 month"
+  ExpiresByType application/javascript          "access plus 1 month"
+  ExpiresByType application/json                "access plus 1 week" # JSON questions
+  ExpiresByType image/jpeg                      "access plus 1 month"
+  ExpiresByType image/png                       "access plus 1 month"
+  ExpiresByType image/gif                       "access plus 1 month"
+  ExpiresByType image/svg+xml                   "access plus 1 month"
+  ExpiresByType image/x-icon                    "access plus 1 month"
+  ExpiresByType audio/mpeg                      "access plus 1 month" # For .mp3 files
+  ExpiresByType application/pdf                 "access plus 1 month"
+  ExpiresByType application/x-font-woff         "access plus 1 year"
+  ExpiresByType application/font-woff2          "access plus 1 year"
+  ExpiresByType text/csv                        "access plus 1 month"
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Security: Deny access to .htaccess itself
+# ----------------------------------------------------------------------
+<Files .htaccess>
+  Require all denied
+</Files>
+
+# ----------------------------------------------------------------------
+# Note on Server-Side Input Sanitization (For Future Development)
+# ----------------------------------------------------------------------
+# If this application is extended to submit data (like scores or names)
+# to a server-side script (e.g., PHP, Node.js, Python):
+#
+# 1. ALWAYS validate and sanitize all user inputs on the SERVER-SIDE
+#    before processing them or storing them in a database.
+# 2. Use prepared statements or parameterized queries for database interactions
+#    to prevent SQL injection.
+# 3. Encode output appropriately to prevent Cross-Site Scripting (XSS) if
+#    displaying user-submitted data back on a webpage.
+#
+# Client-side validation is for user experience, not security.
+# Security relies on robust server-side checks.
