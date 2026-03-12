@@ -19,7 +19,7 @@ For production, deploy to an Apache server (the `htaccess` file enforces HTTPS a
 
 ## Architecture
 
-All game logic lives in `app.js` (~762 lines) as a single-file vanilla JS application. There are no modules, bundlers, or npm dependencies.
+All game logic lives in `app.js` (~870 lines) as a single-file vanilla JS application. There are no modules, bundlers, or npm dependencies.
 
 ### Game State (Global Variables in app.js)
 
@@ -32,7 +32,10 @@ All game logic lives in `app.js` (~762 lines) as a single-file vanilla JS applic
 | `currentQuestions` | Questions queued for current loan |
 | `allQuestionsPool` | All questions loaded from JSON, keyed by difficulty |
 | `activeEvent` | Currently active market/compliance event (or null) |
-| `usedQuestionIds` | Prevents the same question from appearing twice |
+| `usedQuestionIndices` | Prevents the same question from appearing twice |
+| `gameWon` | Whether the current/last game ended via win condition |
+| `shownMidDifficultyToast` | Tracks whether the $6,250 difficulty milestone toast has fired |
+| `shownHardDifficultyToast` | Tracks whether the $12,500 difficulty milestone toast has fired |
 
 ### Core Game Loop
 
@@ -44,7 +47,7 @@ DOMContentLoaded
   → newLoanQuestion() → selects question by loanTypeTag + difficulty
   → showQuestion() → renders to DOM
   → answerLoan() → validates, updates compliance/revenue, plays sound
-  → processLoanRoundEnd() → awards revenue, logs history, checks game-over
+  → processLoanRoundEnd() → awards revenue, logs history, checks win/game-over
   → loop back to generateLoanScenario()
 ```
 
@@ -96,7 +99,15 @@ After 2+ loans, there's a 25% chance of triggering one of four events that modif
 
 ### Sound Assets
 
-`correct.mp3` and `wrong.mp3` exist. The code references `powerup.mp3`, `penalty.mp3`, and `event.mp3` — these files are missing and silently fall back to a dummy Audio object.
+| File | Status | Trigger |
+|---|---|---|
+| `correct.mp3` | ✅ present | Correct answer in `answerLoan()` |
+| `wrong.mp3` | ✅ present | Wrong answer in `answerLoan()` |
+| `powerup.mp3` | ✅ present | Power-up activation in `activatePowerUp()` |
+| `penalty.mp3` | ✅ present | Revenue penalty (0 correct) in `processLoanRoundEnd()` |
+| `event.mp3` | ❌ missing | Dynamic event trigger — silently falls back to dummy Audio |
+
+All sounds are initialized at the top of `app.js` in a try/catch. Missing files do not throw; they fail silently on `.play()` via the Promise rejection handler.
 
 ## Key Game Constants (app.js)
 
@@ -109,7 +120,24 @@ Correct answer:      +5 compliance
 Wrong answer:        -15 compliance (doubled during Internal Audit event)
 Power-up cost:       $2,500 revenue → +10 seconds (once per game)
 Power-up trigger:    every 5 correct answers with revenue ≥ $2,500
+Win condition:       $15,000 revenue → "Career Goal Achieved!" + Senior LO rank
+Difficulty tier 1:   $6,250 → all difficulties unlocked (toast notification fires)
+Difficulty tier 2:   $12,500 → medium + hard only (toast notification fires)
 ```
+
+### Performance Tiers (end screen rank, `getPerformanceTier()`)
+
+| Revenue | Title |
+|---|---|
+| < $5,000 | Loan Processor |
+| $5,000–$9,999 | Associate LO |
+| $10,000–$14,999 | Loan Officer |
+| $15,000–$19,999 | Senior Loan Officer |
+| ≥ $20,000 | VP of Lending |
+
+### Leaderboard
+
+Scores are saved to `localStorage` under the key `lotScores` (JSON array, max 10 entries, sorted by revenue descending). The start screen shows the top 5. Each entry includes: `name`, `revenue`, `compliance`, `correct`, `date`, `won`.
 
 ## Frontend Design System
 
@@ -134,11 +162,15 @@ The UI uses a **"Dark Finance Terminal"** aesthetic — deep navy backgrounds, g
 
 **Timer bar**: `#timerProgressBar` receives `bg-success` / `bg-warning` / `bg-danger` classes from JS. All three are styled via `.timer-fill.bg-*` rules in CSS.
 
+**Compliance meter**: `#complianceMeter` works the same way — `bg-success` / `bg-warning` / `bg-danger` driven by `updateFooterTotals()`. Thresholds: ≤25 = danger, ≤50 = warning, else success.
+
+**Animate.css**: loaded from `cdn.jsdelivr.net` (already in CSP). Used for the event banner flash animation (`animate__animated animate__flash`).
+
 ## Deployment Notes
 
 - The `htaccess` file configures Apache: forces HTTPS, sets Content Security Policy (allows Bootstrap CDN and Google Fonts), enables browser caching.
 - CSP permits scripts only from `'self'` and `cdn.jsdelivr.net` — any new CDN scripts must be added to the CSP.
-- No backend — score submission currently only logs to the browser console.
+- Scores are saved to `localStorage` (key: `lotScores`) — no backend required. Top 5 shown on start screen.
 
 ## GitHub Workflow
 
@@ -151,3 +183,5 @@ git commit -m "descriptive message"
 git push
 ```
 Do not commit `questions_difficulty_full.json` changes unless question content was intentionally edited — it is 103KB and rarely changes.
+
+Sound files (`correct.mp3`, `wrong.mp3`, `powerup.mp3`, `penalty.mp3`) are committed to the repo. `event.mp3` is the only missing sound asset.
