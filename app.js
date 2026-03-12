@@ -41,6 +41,14 @@ let eventChance = 0.25;
 let loansSinceLastEvent = 0;
 const LOANS_BETWEEN_EVENT_CHECKS = 2;
 
+const WIN_REVENUE_TARGET = 15000;
+const DIFFICULTY_THRESHOLD_MID = REVENUE_THRESHOLD_FOR_HARDER_QUESTIONS / 2; // 6250
+const DIFFICULTY_THRESHOLD_HARD = REVENUE_THRESHOLD_FOR_HARDER_QUESTIONS;   // 12500
+
+let gameWon = false;
+let shownMidDifficultyToast = false;
+let shownHardDifficultyToast = false;
+
 // Sound effects
 let correctSound, wrongSound, powerUpSound, penaltySound, eventSound;
 try {
@@ -94,6 +102,11 @@ const powerUpBtn = document.getElementById("powerUpBtn");
 const missedQuestionsReviewPanel = document.getElementById("missedQuestionsReviewPanel");
 const missedQuestionsList = document.getElementById("missedQuestionsList");
 const eventAnnouncementDisplay = document.getElementById("eventAnnouncement");
+const complianceMeter = document.getElementById("complianceMeter");
+const toastContainer = document.getElementById("toastContainer");
+const endRankDisplay = document.getElementById("endRank");
+const leaderboardPanel = document.getElementById("leaderboard");
+const leaderboardList = document.getElementById("leaderboardList");
 
 // Loan Product Definitions
 const loanProducts = [
@@ -207,13 +220,7 @@ function newLoanQuestion() {
     .map(item => item.index);
 
   if (availableQuestionIndicesThisRound.length < questionsPerLoan) {
-    let message = `Not enough unique '${currentLoan.loanTypeTag}' or 'General' questions remaining`;
-     if (revenue >= REVENUE_THRESHOLD_FOR_HARDER_QUESTIONS) message += " from Medium/Hard difficulties!";
-     else message += "!";
-    if(loanDetailsDisplay) loanDetailsDisplay.innerText = message;
-    if(clientProfileDetailsDisplay) clientProfileDetailsDisplay.innerText = "Consider replaying to see all questions.";
-    // loanBtn remains disabled
-    stopMainTimer();
+    gameOver("You've mastered all available questions — incredible career!", true);
     return;
   }
 
@@ -228,10 +235,7 @@ function newLoanQuestion() {
   }
 
   if (currentQuestions.length < questionsPerLoan) {
-      if(loanDetailsDisplay) loanDetailsDisplay.innerText = "Could not gather enough unique questions for this round.";
-      if(clientProfileDetailsDisplay) clientProfileDetailsDisplay.innerText = "";
-      // loanBtn remains disabled
-      stopMainTimer();
+      gameOver("You've mastered all available questions — incredible career!", true);
       return;
   }
 
@@ -379,6 +383,7 @@ function answerLoan(userAnswer) {
 
 // *** MODIFIED FUNCTION BELOW ***
 function processLoanRoundEnd() {
+    const prevRevenue = revenue;
     let roundRevenueChange = 0;
 
     if (currentLoanCorrectAnswers === questionsPerLoan) {
@@ -408,8 +413,7 @@ function processLoanRoundEnd() {
       }
       roundRevenueChange = -penaltyAmount; // Revenue penalty
       revenue = Math.max(0, revenue - penaltyAmount);
-      // Note: Compliance score was already penalized by answerLoan() for the incorrect answer(s)
-      // Do not increment totalCorrectAnswersInGame here as 0 answers were correct in this round segment
+      try { penaltySound.play().catch(e => console.warn("Penalty sound play failed", e)); } catch(e){}
     }
 
     // This calculation now correctly reflects the revenue outcome from any of the above cases
@@ -418,6 +422,8 @@ function processLoanRoundEnd() {
     // Log history with the final outcome for this loan
     logHistory(currentLoan.baseValue, roundRevenueChange, currentLoanCorrectAnswers, complianceScore);
     updateFooterTotals(); // Update displays
+    showRevenueFloat(roundRevenueChange);
+    checkDifficultyMilestone(prevRevenue);
 
     if(questionBox) questionBox.style.display = "none";
     if(feedbackArea) feedbackArea.style.display = 'none';
@@ -428,6 +434,12 @@ function processLoanRoundEnd() {
         if (activeEvent.loansAffected >= activeEvent.durationLoans) {
             clearActiveEvent();
         }
+    }
+
+    // Check for win condition
+    if (revenue >= WIN_REVENUE_TARGET) {
+        gameOver("Career goal reached! You're now a Senior Loan Officer!", true);
+        return;
     }
 
     // Check for game over conditions
@@ -476,6 +488,14 @@ function updateFooterTotals() {
   if (totalCorrectDisplay) totalCorrectDisplay.innerText = totalCorrectAnswersInGame.toString();
   if (revenueDisplay) revenueDisplay.innerText = revenue.toLocaleString();
   if (complianceScoreDisplay) complianceScoreDisplay.innerText = complianceScore;
+  if (complianceMeter) {
+    const pct = Math.max(0, (complianceScore / 150) * 100);
+    complianceMeter.style.width = `${pct}%`;
+    complianceMeter.classList.remove('bg-success', 'bg-warning', 'bg-danger');
+    if (complianceScore <= 25) complianceMeter.classList.add('bg-danger');
+    else if (complianceScore <= 50) complianceMeter.classList.add('bg-warning');
+    else complianceMeter.classList.add('bg-success');
+  }
 }
 
 function updateTimer() {
@@ -548,12 +568,10 @@ function displayMissedQuestions() {
     }
 }
 
-function gameOver(reason = "Time's Up!") {
+function gameOver(reason = "Time's Up!", isWin = false) {
     stopMainTimer();
-    // isInterRoundPaused = false; // Removed
-    // clearTimeout(interRoundPauseTimeoutId); // Removed
+    gameWon = isWin;
     if(loanBtn) loanBtn.disabled = true;
-    // if(pauseBtn) pauseBtn.disabled = true; // Removed
     if(powerUpBtn) powerUpBtn.style.display = 'none';
     if(questionBox) questionBox.style.display = "none";
     if(feedbackArea) feedbackArea.style.display = 'none';
@@ -561,15 +579,37 @@ function gameOver(reason = "Time's Up!") {
     if(finalRevenueDisplay) finalRevenueDisplay.innerText = revenue.toLocaleString();
     if(finalComplianceScoreDisplay) finalComplianceScoreDisplay.innerText = complianceScore;
     if(gameOverReasonDisplay) gameOverReasonDisplay.innerText = reason;
-    if (gameOverReasonDisplay && reason !== "Time's Up!") {
-        gameOverReasonDisplay.classList.add('text-danger', 'fw-bold');
-    } else if (gameOverReasonDisplay) {
-        gameOverReasonDisplay.classList.remove('text-danger', 'fw-bold');
+
+    if (isWin) {
+        if(gameOverReasonDisplay) gameOverReasonDisplay.classList.remove('text-danger', 'fw-bold');
+        if(endScreen) {
+            endScreen.classList.add('end-card--win');
+            const titleEl = endScreen.querySelector('.end-title');
+            if (titleEl) titleEl.textContent = "Career Goal Achieved!";
+            const iconEl = endScreen.querySelector('.end-icon');
+            if (iconEl) iconEl.textContent = "★";
+        }
+    } else {
+        if(endScreen) endScreen.classList.remove('end-card--win');
+        if (gameOverReasonDisplay && reason !== "Time's Up!") {
+            gameOverReasonDisplay.classList.add('text-danger', 'fw-bold');
+        } else if (gameOverReasonDisplay) {
+            gameOverReasonDisplay.classList.remove('text-danger', 'fw-bold');
+        }
     }
+
+    const tier = getPerformanceTier(revenue);
+    if(endRankDisplay) {
+        endRankDisplay.textContent = `${tier.icon} ${tier.title}`;
+        endRankDisplay.style.display = 'block';
+    }
+
     if(playerNameInput) playerNameInput.value = "";
+    const hintEl = document.querySelector('.score-hint');
+    if (hintEl) hintEl.textContent = "Enter your name to save your score";
     if(submitBtn) {
       submitBtn.disabled = false;
-      submitBtn.innerText = "Submit Score";
+      submitBtn.innerText = "Record Score";
     }
     if(replayBtn) replayBtn.style.display = "inline-block";
     displayMissedQuestions();
@@ -587,13 +627,16 @@ function submitScore(event) {
   }
   playerNameInput.classList.remove('is-invalid');
   const date = new Date().toISOString().split('T')[0];
-  const scoreData = {
-    "Name": name, "FinalScore": revenue, "NetResult": totalRevenueEarnedInGame,
-    "CorrectAnswers": totalCorrectAnswersInGame, "ComplianceScore": complianceScore, "Date": date
-  };
-  console.log("Score Submitted (Locally):", scoreData);
+  const scoreData = { name, revenue, compliance: complianceScore, correct: totalCorrectAnswersInGame, date, won: gameWon };
+  const scores = JSON.parse(localStorage.getItem('lotScores') || '[]');
+  scores.push(scoreData);
+  scores.sort((a, b) => b.revenue - a.revenue);
+  scores.splice(10);
+  localStorage.setItem('lotScores', JSON.stringify(scores));
   submitBtn.disabled = true;
-  submitBtn.innerText = "Score Recorded";
+  submitBtn.innerText = "Score Saved ✓";
+  const hintEl = document.querySelector('.score-hint');
+  if (hintEl) hintEl.textContent = "Score saved to leaderboard!";
 }
 
 // togglePause function removed
@@ -690,6 +733,9 @@ function startGame() {
   loansSinceLastEvent = 0;
   powerUpAvailable = false;
   powerUpUsedThisGame = false;
+  gameWon = false;
+  shownMidDifficultyToast = false;
+  shownHardDifficultyToast = false;
 
   updateFooterTotals();
 
@@ -716,7 +762,15 @@ function startGame() {
   if(startScreen) startScreen.style.display = "none";
   if(gameUILayout) gameUILayout.style.display = "block";
   if(historyPanel) historyPanel.style.display = "block";
-  if(endScreen) endScreen.style.display = "none";
+  if(endScreen) {
+    endScreen.style.display = "none";
+    endScreen.classList.remove('end-card--win');
+    const titleEl = endScreen.querySelector('.end-title');
+    if (titleEl) titleEl.textContent = "Session Complete";
+    const iconEl = endScreen.querySelector('.end-icon');
+    if (iconEl) iconEl.textContent = "◈";
+  }
+  if(endRankDisplay) endRankDisplay.style.display = 'none';
 
   // if(pauseBtn) { // Pause button logic removed
   //   pauseBtn.textContent = 'Pause';
@@ -752,10 +806,67 @@ if(replayBtn) replayBtn.addEventListener("click", startGame);
 // if(pauseBtn) pauseBtn.addEventListener("click", togglePause); // Removed
 if(powerUpBtn) powerUpBtn.addEventListener("click", activatePowerUp);
 
+// ── New helper functions ──
+
+function getPerformanceTier(rev) {
+  if (rev >= 20000) return { title: "VP of Lending", icon: "★" };
+  if (rev >= 15000) return { title: "Senior Loan Officer", icon: "◆" };
+  if (rev >= 10000) return { title: "Loan Officer", icon: "◈" };
+  if (rev >= 5000)  return { title: "Associate LO", icon: "◇" };
+  return { title: "Loan Processor", icon: "○" };
+}
+
+function loadLeaderboard() {
+  if (!leaderboardPanel || !leaderboardList) return;
+  const scores = JSON.parse(localStorage.getItem('lotScores') || '[]');
+  if (scores.length === 0) { leaderboardPanel.style.display = 'none'; return; }
+  leaderboardList.innerHTML = '';
+  scores.slice(0, 5).forEach((s, i) => {
+    const row = document.createElement('div');
+    row.className = 'leaderboard-row';
+    row.innerHTML = `
+      <span class="leaderboard-rank">${i + 1}.</span>
+      <span class="leaderboard-name">${s.name}</span>
+      <span class="leaderboard-score">$${Number(s.revenue).toLocaleString()}</span>
+      <span class="leaderboard-badge ${s.won ? 'win' : 'loss'}">${s.won ? 'WIN' : 'END'}</span>`;
+    leaderboardList.appendChild(row);
+  });
+  leaderboardPanel.style.display = 'block';
+}
+
+function showRevenueFloat(amount) {
+  const anchor = document.querySelector('.stat-revenue');
+  if (!anchor) return;
+  const floatEl = document.createElement('div');
+  floatEl.className = `revenue-float ${amount >= 0 ? 'positive' : 'negative'}`;
+  floatEl.textContent = amount >= 0 ? `+$${amount.toLocaleString()}` : `-$${Math.abs(amount).toLocaleString()}`;
+  anchor.appendChild(floatEl);
+  setTimeout(() => floatEl.remove(), 1600);
+}
+
+function showToast(message) {
+  if (!toastContainer) return;
+  const toast = document.createElement('div');
+  toast.className = 'toast-notification';
+  toast.textContent = message;
+  toastContainer.appendChild(toast);
+  setTimeout(() => toast.remove(), 3100);
+}
+
+function checkDifficultyMilestone(prevRevenue) {
+  if (!shownHardDifficultyToast && prevRevenue < DIFFICULTY_THRESHOLD_HARD && revenue >= DIFFICULTY_THRESHOLD_HARD) {
+    shownHardDifficultyToast = true;
+    showToast('⬆ Difficulty Increased — Hard questions now active');
+  } else if (!shownMidDifficultyToast && prevRevenue < DIFFICULTY_THRESHOLD_MID && revenue >= DIFFICULTY_THRESHOLD_MID) {
+    shownMidDifficultyToast = true;
+    showToast('⬆ Difficulty Increased — All tiers now active');
+  }
+}
+
 // Initial Load
 window.addEventListener("DOMContentLoaded", async () => {
   await loadQuestions();
-  // Show start screen after questions are loaded (or attempted)
+  loadLeaderboard();
   if(startScreen) startScreen.style.display = "block";
   if(gameUILayout) gameUILayout.style.display = "none";
   if(endScreen) endScreen.style.display = "none";
